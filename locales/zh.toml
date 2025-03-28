@@ -1,0 +1,70 @@
+title = "tttiw.github.io"
+download = "下载"
+more-confetti = "更多彩纸"
+goto = "前往"
+
+[lang]
+en = "English"
+zh = "中文"
+
+[ilde]
+title = "Illusory Dept."
+description = "我的个人项目。有一个同名微信公众号作为分部。"
+
+[wCalc]
+title = "wCalc"
+description = "轻量、互动型的 Python 工具，专为每日的快速任务设计。"
+
+[update]
+title = "更新计划"
+description = "(1) wCalc"
+
+[game]
+title = "A RPG"
+description = "我的秘密项目。"
+
+[about-me]
+title = "Me!"
+description = """
+“今天是哪一天呢？”
+"今天是今天。"
+"喔。我最喜欢的一天。"
+"""
+
+[about-me.table]
+l1r1 = "我最爱的..."
+l1r2 = "是..."
+l2r1 = "爱好"
+l2r2 = "白日梦"
+l3r1 = "游戏"
+l3r2 = "原版 Minecraft 或 Terraria"
+l4r1 = "专辑"
+l4r2 = "Underwater by Ludovico Einaudi"
+
+[links]
+title = "链接"
+
+[credits]
+title = "致谢"
+description = """
+由 tttiw 制作。
+网站图标由 3s. 绘制。
+"""
+
+[issues]
+title = "反馈漏洞"
+
+[terminal]
+title = "迷你终端"
+execute = "执行"
+clear = "清空终端"
+reset = "重置环境"
+maximize = "最大化终端"
+description = """
+友谊提示：
+(1) 按 Ctrl+Enter 以执行。
+(2) 请勿运行耗时代码（尤其是死循环）
+(3) # 加载包：
+import micropip
+micropip.install("package_name")
+"""

@@ -1,0 +1,22 @@
+[[posts]]
+title = "代码模板"
+description = "wCalc 的代码模板"
+date = "2025-03-28"
+tags = ["Functional"]
+file = "code-template.md"
+
+[[posts]]
+title = "Markdown Test"
+description = "用于调试的文章"
+date = "2025-03-15"
+author = "ChatGPT"
+tags = ["Debug"]
+file = "markdown-test.md"
+
+[[posts]]
+title = "目录"
+description = "用作目录的文章"
+date = "2025-03-16"
+author = "tttiw"
+tags = ["Functional"]
+file = "list.md"

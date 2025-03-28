@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">tttiw.github.io</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preload" href="fonts/Andy Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/jnmyt.ttf" as="font" type="font/ttf" crossorigin>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <meta name="theme-color" content="#4b2328"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card-grid">
+
+        <div class="card card-full toolbar">
+            <div class="card-header">
+
+                <div class="color-buttons-container">
+                    <button class="color-button color-button-confetti"
+                            id="confetti-button"></button>
+
+                    <button class="color-button color-button-green"
+                            title="Language..."
+                            onclick="document.getElementById('language-selector-card')
+                                .classList.toggle('hidden');"></button>
+                </div>
+
+                <h2 class="header-title-desktop center-text" data-i18n="title"></h2>
+
+                <div class="switch-wrapper">
+                    <div class="switch theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <label class="slider" for="theme-toggle">
+                            <span class="star star1"></span>
+                            <span class="star star2"></span>
+                            <span class="star star3"></span>
+                            <span class="star star4"></span>
+                            <span class="star star5"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="header-title-mobile center-text" data-i18n="title"></h2>
+
+        </div>
+
+        <div class="card card-full card-reduced-padding-bottom hidden" id="language-selector-card">
+            <div class="buttons-container">
+                <button class="minimalism-button language-selector-item"
+                        data-i18n="lang.en"
+                        data-lang="en"
+                >
+                </button>
+
+                <button class="minimalism-button language-selector-item"
+                        data-i18n="lang.zh"
+                        data-lang="zh"
+                >
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="glass-image-container gradient-blue-gray">
+            </div>
+            <h3 data-i18n="ilde.title"></h3>
+            <p data-i18n="ilde.description"></p>
+
+            <button class="minimalism-button"
+                    onclick="document.getElementById('blog-title')
+                                .scrollIntoView({ behavior: 'smooth', block: 'center' })"
+            >
+                <span data-i18n="goto"></span>
+            </button>
+
+            <div class="tags-container">
+                <span class="tag tag-green">Personal Project</span>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="glass-image-container gradient-yellow-pink">
+            </div>
+            <h3 data-i18n="game.title"></h3>
+            <p data-i18n="game.description"></p>
+            <div class="tags-container">
+                <span class="tag tag-yellow">C#</span>
+                <span class="tag tag-grey">TBA</span>
+            </div>
+        </div>
+
+
+        <div class="card image-card">
+            <div class="card-img-background" style="background-image: url('images/witt-s-calculator.jpg');"></div>
+            <div class="glass-overlay"></div>
+            <div class="info-box">
+                <h3 data-i18n="wCalc.title"></h3>
+                <p data-i18n="wCalc.description"></p>
+
+                <div class="buttons-container">
+
+                    <button class="minimalism-button"
+                            data-target-url="https://github.com/tttiw/wCalc"
+                    >
+                        <span data-i18n="download"></span>
+                    </button>
+
+                </div>
+                <div class="tags-container">
+                    <span class="tag tag-purple">Tauri 2.0</span>
+                    <span class="tag tag-red">Apache-2.0</span>
+                    <span class="tag tag-blue">Beta</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="center-text" data-i18n="update.title"></h3>
+            <p>
+                <span class="code-inline independent-code-inline scrollable"
+                      data-i18n="update.description"></span>
+            </p>
+        </div>
+
+
+        <div class="card card-wide">
+            <h3 class="center-text" data-i18n="about-me.title"></h3>
+
+            <div class="image-container">
+                <img src="images/Cute_Fishron_Mount.webp" alt="cute fishron">
+                <img src="images/Cute_Fishron_Mount.webp" class="mirror-flip" alt="cute fishron">
+            </div>
+
+            <p class="center-text pre-wrap" data-i18n="about-me.description"></p>
+            <table class="themed-table">
+                <thead>
+
+                <tr>
+                    <th data-i18n="about-me.table.l1r1"></th>
+                    <th data-i18n="about-me.table.l1r2"></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td class="no-wrap" data-i18n="about-me.table.l2r1"></td>
+                    <td data-i18n="about-me.table.l2r2"></td>
+                </tr>
+
+                <tr>
+                    <td class="no-wrap" data-i18n="about-me.table.l3r1"></td>
+                    <td data-i18n="about-me.table.l3r2"></td>
+                </tr>
+
+                <tr>
+                    <td class="no-wrap" data-i18n="about-me.table.l4r1"></td>
+                    <td data-i18n="about-me.table.l4r2"></td>
+                </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+
+        <div class="card">
+            <h3 class="center-text" data-i18n="links.title"></h3>
+
+            <div class="buttons-container">
+
+                <button class="minimalism-button"
+                        data-target-url="https://zeyi2.github.io"
+                >
+                    <span>Mitchell's Homepage</span>
+                </button>
+
+
+                <button class="minimalism-button"
+                        data-target-url="original_website.html"
+                >
+                    <span>???</span>
+                </button>
+
+                <button class="minimalism-button"
+                        data-target-url="https://github.com/tttiw/tttiw.github.io/issues"
+                >
+                    <span data-i18n="issues.title"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+            <h3 class="center-text" data-i18n="credits.title"></h3>
+            <p>
+                <span class="code-inline independent-code-inline"
+                      data-i18n="credits.description"
+                ></span>
+            </p>
+
+            <div class="switch-wrapper">
+
+                <label class="switch">
+                    <input type="checkbox" id="more-confetti-toggle">
+                    <span class="slider"></span>
+                </label>
+
+                <label class="switch-label" data-i18n="more-confetti"></label>
+            </div>
+        </div>
+
+        <div class="card python-terminal-card card-wide">
+            <h3 class="center-text" data-i18n="terminal.title"></h3>
+            <p class="reduced-margin-top">
+                <span class="code-inline independent-code-inline scrollable"
+                      data-i18n="terminal.description"></span>
+            </p>
+            <div class="terminal-container">
+                <div id="python-terminal" class="python-terminal"></div>
+            </div>
+
+            <div class="code-editor-container">
+                <textarea id="python-code-editor"></textarea>
+            </div>
+
+            <div class="terminal-controls">
+
+                <button id="run-code-btn" class="minimalism-button">
+                    <span data-i18n="terminal.execute"></span>
+                </button>
+
+                <button id="maximize-terminal-btn" class="minimalism-button">
+                    <span data-i18n="terminal.maximize"></span>
+                </button>
+
+                <button id="clear-terminal-btn"
+                        class="minimalism-button clear-btn"
+                        require-confirmation="true"
+                >
+                    <span data-i18n="terminal.clear"></span>
+                </button>
+
+                <button id="reset-env-btn"
+                        class="minimalism-button clear-btn"
+                        require-confirmation="true"
+                >
+                    <span data-i18n="terminal.reset"></span>
+                </button>
+
+
+            </div>
+
+            <div class="tags-container">
+                <span class="tag tag-purple">Pyodide</span>
+                <span class="tag tag-purple">CodeMirror</span>
+                <span class="tag tag-blue">Beta</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="blog-section" class="blog-section">
+    <div class="container">
+        <div class="article-card blog-card">
+            <h2 id="blog-title" class="center-text" data-i18n="ilde.title"></h2>
+            <div id="blog-list" class="blog-grid">
+                <div class="blog-loading">Loading...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/blog-list-loader.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/zenburn.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/matchbrackets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/closebrackets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/selection/active-line.js"></script>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+
+<script src="js/button-confirmation-effect.js"></script>
+<script src="js/button-navigation.js"></script>
+<script src="js/confetti.js"></script>
+<script src="js/python-terminal.js"></script>
+<script type="module" src="js/localizer.js"></script>
+<script src="js/dark-mode.js"></script>
+
+</body>
+
+</html>
