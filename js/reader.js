@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDarkMode = savedDarkMode === 'true';
 
         if (!isDarkMode) {
-            // 如果保存的是亮色模式，手动触发一次切换
             toggleDarkMode();
         }
     }
