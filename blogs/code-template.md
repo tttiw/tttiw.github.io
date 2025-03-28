@@ -1,11 +1,13 @@
 # Code Template
 
 ## Table of Contents
-
+- Math
+    - Truth Table
+- Image Processing
 
 ## Math
 
-### Truth table
+### Truth Table
 
 ```python
 # Replace with your own expression
@@ -263,10 +265,47 @@ print("\n")
 
 ## Image Processing
 
-### Apply rounded corners
+### * -> .png
 
 ```python
-# Your file name here
+# Set your file name here
+file_name = "file_name.jpg"
+converted_file_name = "converted_file_name.png"
+
+from PIL import Image
+img = Image.open(file_name)
+img.save("converted_file_name.png", "PNG")
+```
+
+### Apply Rounded Corners
+
+```python
+# Set your file name and desired radius here
+file_name = "wCalc-icon.jpg"
+converted_file_name = "wCalc-icon.png"
+radius = 64
+
+from js import download, get_loaded
+from PIL import Image, ImageDraw
+import io
+
+binary_data = get_loaded(file_name)
+img = Image.open(io.BytesIO(binary_data)).convert("RGBA")
+w, h = img.size
+mask = Image.new("L", (w, h), 0)
+draw = ImageDraw.Draw(mask)
+draw.rounded_rectangle((0, 0, w, h), radius=radius, fill=255)
+img.putalpha(mask)
+buffer = io.BytesIO()
+img.save(buffer, format="PNG")
+download(converted_file_name, buffer.getvalue())
+
+```
+
+### Apply Gaussian Blur
+
+```python
+# Set your file name here
 file_name = "file_name.jpg"
 converted_file_name = "converted_file_name.png"
 
@@ -283,14 +322,3 @@ download(converted_file_name, buffer.getvalue())
 
 ```
 
-### * -> .png
-
-```python
-# Your file name here
-file_name = "file_name.jpg"
-converted_file_name = "converted_file_name.png"
-
-from PIL import Image
-img = Image.open(file_name)
-img.save("converted_file_name.png", "PNG")
-```
