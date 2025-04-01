@@ -268,21 +268,28 @@ print("\n")
 ### * -> .png
 
 ```python
-# Set your file name here
-file_name = "file_name.jpg"
-converted_file_name = "converted_file_name.png"
+# Replace PH(s) with your file name here
+file_name = "PH1.jpg"
+converted_file_name = "PH2.png"
 
+from js import download, get_loaded
 from PIL import Image
-img = Image.open(file_name)
-img.save("converted_file_name.png", "PNG")
+import io
+
+binary_data = get_loaded(file_name)
+img = Image.open(io.BytesIO(binary_data)).convert("RGBA")
+buffer = io.BytesIO()
+img.save(buffer, format="ICO")
+download(converted_file_name, buffer.getvalue())
+
 ```
 
 ### Apply Rounded Corners
 
 ```python
-# Set your file name and desired radius here
-file_name = "wCalc-icon.jpg"
-converted_file_name = "wCalc-icon.png"
+# Replace PH(s) with your file name and set desired radius here
+file_name = "PH1.jpg"
+converted_file_name = "PH2.png"
 radius = 64
 
 from js import download, get_loaded
@@ -305,7 +312,7 @@ download(converted_file_name, buffer.getvalue())
 ### Apply Gaussian Blur
 
 ```python
-# Set your file name here
+# Replace PH(s) with your file name here
 file_name = "file_name.jpg"
 converted_file_name = "converted_file_name.png"
 
