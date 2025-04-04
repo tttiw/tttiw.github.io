@@ -60,7 +60,7 @@ For more functions that wCalc provides, check out the [wCalc API reference](@blo
 - Pyodide
 - My time
 - My energy
-- Apache 2.0 License
+- Apache-2.0 license
 
 ---
 

@@ -1,9 +1,9 @@
 # wCalc API Reference
 
-To use these functions, you need to import them first:
+To use the following functions, you need to import them first:
 
 ```python
-from wCalc import input
+from wCalc import input, get_loaded_file
 ```
 
 ## Reference
@@ -18,7 +18,7 @@ Custom implementation of `input`. Note that the default built-in `input()` is no
 
 ---
 
-### `wCalc.getLoadedFile(file_name)`
+### `wCalc.get_file(file_name)`
 
 Returns the binary data of a previously loaded file.
 
