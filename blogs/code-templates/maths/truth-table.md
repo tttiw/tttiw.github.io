@@ -37,7 +37,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from js import input, get_current_lang
+from wCalc import input, get_current_lang
 
 OP_AND = '&'
 OP_OR = '|'

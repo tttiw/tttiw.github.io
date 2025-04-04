@@ -3,7 +3,7 @@
 To use the following functions, you need to import them first:
 
 ```python
-from wCalc import input, get_loaded_file
+from wCalc import input, get_file
 ```
 
 ## Reference

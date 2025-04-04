@@ -5,7 +5,7 @@ This code template converts an image to PNG format.
 ## Code
 
 ```python
-from js import input, get_file, download
+from wCalc import input, get_file, download
 import io
 import micropip
 await micropip.install("Pillow")
