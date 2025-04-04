@@ -75,5 +75,5 @@ So I built wCalc for myself, and now for you too. Hope you enjoy it!
 
 ## Feedback
 
-You can open an issue [here](https://github.com/tttiw/wCalc/issues).
+You can open an issue [here](https://github.com/tttiw/wCalc/issues) if you encounter a problem or have a suggestion.
 

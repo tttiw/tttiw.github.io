@@ -1,7 +1,8 @@
 title = "tttiw.github.io"
 download = "Download"
+readme = "Readme"
 more-confetti = "More Confetti"
-goto = "goto"
+goto = "Go to"
 
 [lang]
 en = "English"
@@ -53,8 +54,6 @@ The website's icon was made by 3s.
 
 [issues]
 title = "Report Issues"
-description = "Report issues or suggestions here:"
-redirect = "(Here)"
 
 [terminal]
 title = "Mini Terminal"
@@ -63,7 +62,6 @@ clear = "Clear Terminal"
 reset = "Reset env"
 maximize = "Maximize Terminal"
 description = """
-Friendly Tips:
 (1) Use Ctrl+Enter to execute.
 (2) Do not run heavy code. (Especially infinite loops)
 (3) # To load packages:

@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     navigationButtons.forEach(button => {
         const targetUrl = button.getAttribute('data-target-url');
-
-
+        
         if (!targetUrl) {
             return;
         }
