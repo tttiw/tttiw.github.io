@@ -9,11 +9,11 @@ zh = "中文"
 
 [ilde]
 title = "Illusory Dept."
-description = "My personal project. There is also an official Weixin account branch."
+description = "My personal project. There is also an official Weixin account with the same name."
 
 [wCalc]
 title = "wCalc"
-description = "A lightweight, interactive Python tool for quick scripts and everyday tasks."
+description = "A lightweight, interactive tool for quick Python scripts and everyday tasks."
 
 [update]
 title = "Upcoming Updates"
@@ -59,9 +59,9 @@ redirect = "(Here)"
 [terminal]
 title = "Mini Terminal"
 execute = "Execute"
-clear = "Clear terminal"
+clear = "Clear Terminal"
 reset = "Reset env"
-maximize = "Maximize terminal"
+maximize = "Maximize Terminal"
 description = """
 Friendly Tips:
 (1) Use Ctrl+Enter to execute.

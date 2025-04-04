@@ -1,22 +1,38 @@
 [[posts]]
-title = "代码模板"
-description = "wCalc 的代码模板"
+title = "README for wCalc"
+description = "The introduction to wCalc"
+date = "2025-04-04"
+author = "tttiw"
+tags = ["wCalc"]
+file = "wcalc-readme.md"
+
+[[posts]]
+title = "Code Templates"
+description = "Code templates for wCalc"
 date = "2025-03-28"
-tags = ["Functional"]
-file = "code-template.md"
+tags = ["wCalc"]
+file = "code-templates.md"
+
+[[posts]]
+title = "wCalc API Reference"
+description = "The API reference for wCalc"
+date = "2025-04-04"
+author = "tttiw"
+tags = ["wCalc"]
+file = "wcalc-api.md"
 
 [[posts]]
 title = "Markdown Test"
-description = "用于调试的文章"
+description = "For debugging"
 date = "2025-03-15"
 author = "ChatGPT"
 tags = ["Debug"]
 file = "markdown-test.md"
 
 [[posts]]
-title = "目录"
-description = "用作目录的文章"
+title = "Catalog"
+description = "The catalog"
 date = "2025-03-16"
 author = "tttiw"
-tags = ["Functional"]
+tags = ["Illusory Dept."]
 file = "list.md"

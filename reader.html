@@ -15,14 +15,7 @@
     <div class="reader-header">
         <div class="reader-top-bar">
             <div class="reader-buttons">
-                <a href="#" class="reader-button red no-print" onclick="(() => {
-    if (document.referrer.includes('index.html') || document.referrer.endsWith('/')) {
-        history.back();
-    } else {
-        window.location.href = 'index.html';
-    }
-    return false;
-})()"></a>
+                <a href="#" class="reader-button red no-print" onclick="history.back(); return false;"></a>
                 <a href="#" class="reader-button yellow no-print" onclick="toggleDarkMode(); return false;"></a>
 
             </div>

@@ -9,11 +9,11 @@ zh = "中文"
 
 [ilde]
 title = "Illusory Dept."
-description = "我的个人项目。有一个同名微信公众号作为分部。"
+description = "我的个人项目，有一个同名的微信公众号。"
 
 [wCalc]
 title = "wCalc"
-description = "轻量、互动型的 Python 工具，专为每日的快速任务设计。"
+description = "轻量、互动型的工具，为快速撰写 Python 代码、完成每日任务而设计。"
 
 [update]
 title = "更新计划"

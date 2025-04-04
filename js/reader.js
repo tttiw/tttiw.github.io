@@ -16,7 +16,7 @@ async function loadBlogContent() {
                 emptyLangClass: 'hljs',
                 langPrefix: 'hljs language-',
                 highlight(code, lang, info) {
-                    const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                    const language = hljs.getLanguage(lang) ? lang : 'text';
                     return hljs.highlight(code, { language }).value;
                 }
             })
@@ -27,7 +27,7 @@ async function loadBlogContent() {
             renderer: {
                 code(code) {
                     const codeText = code.text;
-                    const codeLang = code.lang || 'plaintext';
+                    const codeLang = code.lang || 'text';
 
                     return `<pre data-language="${codeLang}"><button class="copy-button" onclick="copyCodeToClipboard(this)">copy</button><code class="hljs language-${codeLang}">${codeText}</code></pre>`;
                 },

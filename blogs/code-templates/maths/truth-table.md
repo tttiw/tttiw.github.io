@@ -1,46 +1,43 @@
-# Code Template
+# Truth Table
 
-## Table of Contents
-- Math
-    - Truth Table
-- Image Processing
+This code template generates a truth table for a given logical expression.
 
-## Math
+Ported from "tt.c" by Mitchell Xu - https://github.com/zeyi2/tt.c
 
-### Truth Table
+## License
+
+Both this version and the original are licensed under the MIT License.
+
+## Code
 
 ```python
-# Replace with your own expression
-expr_str = "A&B|C^B"
-
-# Translated from C to Python by tttiw
-# Original code: Mitchell Xu, licensed under the MIT License
-# See original: https://github.com/zeyi2/tt.c
 
 """
-Copyright 2025 Mitchell Xu <mitchell@sdf.org>
+MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Copyright (c) 2025 tttiw
+Copyright (c) 2025 Mitchell Xu <mitchell@sdf.org>
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 """
 
-import sys
+from js import input, get_current_lang
 
 OP_AND = '&'
 OP_OR = '|'
@@ -104,8 +101,7 @@ def tokenize(s):
         elif ch.isalpha():
             tokens.append(Token(OP_VAR, ch))
         else:
-            print(f"Illegal character {ch}, expect a Token", file=sys.stderr)
-            sys.exit(1)
+            raise RuntimeError(f"Illegal character: {ch}")
     tokens.append(Token(OP_END))
     return tokens
 
@@ -150,13 +146,11 @@ class Parser:
             self.consume()
             expr = self.parexp(0)
             if self.current_token().op != OP_RPAR:
-                print(f"Mismatched Parentheses at position {self.pos}", file=sys.stderr)
-                sys.exit(1)
+                raise RuntimeError(f"Mismatched Parentheses at position {self.pos}")
             self.consume()
             return expr
         else:
-            print("Expect an expression", file=sys.stderr)
-            sys.exit(1)
+            raise RuntimeError("Expect an expression")
 
     def parexp(self, m_prec):
         left = self.parse()
@@ -250,82 +244,19 @@ def print_ast(node, depth=0, is_left=False):
 
     print_ast(node.left, depth + 1, True)
 
+if(get_current_lang() == "zh"):
+    prompt = "输入表达式（如 A&B|C^B）："
+else:
+    prompt = "Enter expression (eg. A&B|C^B):"
+    
+expr_str = await input(prompt)
 tokens = tokenize(expr_str)
 parser = Parser(tokens)
 expr = parser.parexp(0)
-
 var_list = []
 collect(expr, var_list)
 print_table(expr_str, expr, var_list)
 print("\n")
 print_ast(expr, 0, False)
 print("\n")
-
 ```
-
-## Image Processing
-
-### * -> .png
-
-```python
-# Replace PH(s) with your file name here
-file_name = "PH1.jpg"
-converted_file_name = "PH2.png"
-
-from js import download, get_loaded
-from PIL import Image
-import io
-
-binary_data = get_loaded(file_name)
-img = Image.open(io.BytesIO(binary_data)).convert("RGBA")
-buffer = io.BytesIO()
-img.save(buffer, format="ICO")
-download(converted_file_name, buffer.getvalue())
-
-```
-
-### Apply Rounded Corners
-
-```python
-# Replace PH(s) with your file name and set desired radius here
-file_name = "PH1.jpg"
-converted_file_name = "PH2.png"
-radius = 64
-
-from js import download, get_loaded
-from PIL import Image, ImageDraw
-import io
-
-binary_data = get_loaded(file_name)
-img = Image.open(io.BytesIO(binary_data)).convert("RGBA")
-w, h = img.size
-mask = Image.new("L", (w, h), 0)
-draw = ImageDraw.Draw(mask)
-draw.rounded_rectangle((0, 0, w, h), radius=radius, fill=255)
-img.putalpha(mask)
-buffer = io.BytesIO()
-img.save(buffer, format="PNG")
-download(converted_file_name, buffer.getvalue())
-
-```
-
-### Apply Gaussian Blur
-
-```python
-# Replace PH(s) with your file name here
-file_name = "file_name.jpg"
-converted_file_name = "converted_file_name.png"
-
-from js import download, get_loaded
-from PIL import Image, ImageFilter
-import io
-
-binary_data = get_loaded(file_name)
-img = Image.open(io.BytesIO(binary_data))
-blurred = img.filter(ImageFilter.GaussianBlur(radius=5))
-buffer = io.BytesIO()
-blurred.save(buffer, format="PNG")
-download(converted_file_name, buffer.getvalue())
-
-```
-
