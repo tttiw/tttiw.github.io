@@ -9,9 +9,10 @@
 ## ✨ Features
 
 - No Python installation needed
-- No "Save?" prompts before exit
-- Python beginner-friendly (even if you have never coded)
+- No "Save?" prompts before execution or exit
+- Beginner-friendly experience (even if you've never coded)
 - Pre-written templates for common tasks like math, image processing, etc.
+- Apache-2.0 license
 
 ---
 
@@ -26,7 +27,7 @@
 
 ## Getting Started
 
-wCalc works like a hybrid between an interpreter and a REPL. 
+wCalc works half like a REPL.
 You write code in the editor, execute it, then continue building on top of your previous code.
 
 You can customize the startup script with:
@@ -44,13 +45,12 @@ For more functions that wCalc provides, check out the [wCalc API reference](@blo
 ## 📸 Example Workflow
 
 1. Drag a photo into the window
-2. It appears in the **Loaded Files** section
-3. Open **Code Templates** and pick "Apply Gaussian Blur"
-4. Copy and paste the template into the editor
-5. Press **Execute** 
-6. The terminal asks for file names
-7. Your processed photo appears in your **Downloads** folder 🎉
-8. Happily exit wCalc without saving anything
+2. Open **Code Templates** and pick "Apply Gaussian Blur"
+3. Copy and paste the template into the editor
+4. Press **Execute**
+5. wCalc asks for file names
+6. The processed photo appears in your **Downloads** folder 🎉
+7. Happily exit wCalc
 
 ---
 
@@ -60,13 +60,12 @@ For more functions that wCalc provides, check out the [wCalc API reference](@blo
 - Pyodide
 - My time
 - My energy
-- Apache-2.0 license
 
 ---
 
 ## Why I Built This
 
-I wanted a convenient and satisfying tool that could take advantage of powerful Python libraries 
+I wanted a convenient and satisfying tool that could take advantage of powerful Python libraries
 (like `sympy` and `Pillow`) without needing to install packages on my machine, save scripts, or open a full-blown IDE.
 
 So I built wCalc for myself, and now for you too. Hope you enjoy it!
